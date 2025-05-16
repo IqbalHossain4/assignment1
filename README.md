@@ -1,7 +1,7 @@
 <h1>Questions: What are some differences between interfaces and types in TypeScript?</h1>
 
 Answer: I think interfaces and types are both very important in TypeScript because they help users understand and define structures easily. While interfaces and types are similar, there are some key differences. Let’s look at them.
-Declaration:
+<h3>Declaration:</h3>
 Interfaces use the interface keyword, while types use the type keyword for declaration.
 example: 
 interface Person {
@@ -14,7 +14,7 @@ type Employee = {
   age: number;
 };
 
-Extensibility:
+<h3>Extensibility:</h3>
 Interfaces can be extended using extends, while types use the & (intersection) operator.
 Example: 
 interface Person {
@@ -33,7 +33,7 @@ type DeveloperType = PersonType & {
   language: string;
 };
 
-Merging:
+<h3>Merging:</h3>
 Interfaces with the same name in the same scope will be merged automatically. However, types with the same name will cause a compiler error.
 Example:
 interface Animal {
@@ -51,14 +51,14 @@ type Plant = {
 };
 
 
-Capabilities:
+<h3>Capabilities:</h3>
 Both interfaces and types can define object shapes, but types are more flexible. Types can define unions, tuples, and other complex structures that interfaces cannot.
 Example: 
 type Status = "loading" | "success" | "error";
 type Point = [number, number];
 
 
-Use Cases:
+<h3>Use Cases:</h3>
 Interfaces are commonly used for defining object shapes and classes. Types are preferred when creating aliases for complex types or primitive unions.
 Example:
 interface User {
@@ -72,7 +72,7 @@ type ID = string | number;
 
 
 
-Questions: What is the use of the keyof keyword in TypeScript? Provide an example.
+<h1>Questions: What is the use of the keyof keyword in TypeScript? Provide an example.</h1>
 
 Answer: The keyof keyword is used to get a union of all property names (keys) of a type or interface. It returns the keys as a string literal type. keyof is useful when you want to access object properties dynamically in a type-safe way.
 Example: 
